@@ -1,0 +1,101 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+marquee {
+    background-color: yellow;
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+html {
+    overflow: hidden;
+}
+
+.tabela {
+    border-spacing: 100px;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 300px;
+    height: 100px;
+    transition: 0.5s;
+
+    color: whitesmoke;
+    background-color: tomato;
+}
+
+.opacidade {
+    opacity: 0.5;
+}
+
+.opacidade:hover {
+    opacity: 1;
+}
+
+.cor:hover {
+    background-color: blue;
+}
+
+.grow:hover {
+    transform: scale(1.5);
+}
+
+.encolher:hover {
+    transform: scale(0.5);
+}
+
+.girar:hover {
+    transform: rotate(360deg);
+}
+
+.arredondar:hover {
+    border-radius: 50%;
+}
+
+.three-d:hover {
+    box-shadow: 20px 20px #360202;
+    transform: translate(-20px, -10px);
+}
+
+.balanco:hover {
+    animation: infinite;
+    animation-name: balanca;
+    animation-duration: 0.5s;
+
+}
+
+@keyframes balanca {
+    50% {
+        transform: translate(10px);
+    }
+    100% {
+        transform: translate(-10px);
+    }
+}
+
+.cantos:hover {
+    border-radius: 20px;
+}
+
+.direita::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    right: -100vw;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 0, 0.5);
+
+    transition: 0.5s;
+}
+.direita:hover:before {
+    transform: translate(-100vw);
+    transition: 0.5s;
+}
